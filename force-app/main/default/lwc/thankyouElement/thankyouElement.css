@@ -1,0 +1,31 @@
+.bgcolor{
+    background-color: black;
+    color: white;  
+    padding: 10px;
+}
+h1{
+padding-top: 5px;
+}
+.line{
+    border: 2px solid yellow;
+    width: 3%;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+p{
+    margin-top:15px;
+    margin-bottom:5px;
+}
+button{
+    padding:2px 50px 2px;
+    background-color: transparent; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.close {
+  cursor: pointer;
+  float:right;
+  margin-right: 10px;
+  line-height: 0;
+  margin-top: 15px;
+}

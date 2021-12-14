@@ -1,0 +1,33 @@
+<template>
+    <div class="body">
+    <div><a class="close" href="#">×</a></div>
+            <div class="slds-container_fluid row">                                    
+                    <div class="heading">WE'RE SORRY TO SEE YOU GO</div>
+                    <hr class="bottombar">                      
+                <div class="paradetails">
+                    <p>
+                        We aim to provide useful, relevent resources and information, but we recognize that 
+                        sometimes interests change or email boxes get overloaded. Below is the short poll for you 
+                        to provide feedback about why you decided to unsubscribe. We truly appreciate and value your
+                        opinion.
+                    </p>
+                    <div>What was the main reason you unsubscribed?</div>
+                    <div class="options">
+                        <input type="radio" id="notrelevant" name="unsubscribe" value="notrelevant">
+                        <label for="notrelevant">The content of emails was not relevant to me.</label><br>
+                        <input type="radio" id="changejob" name="unsubscribe" value="changejob">
+                        <label for="changejob">I have recently changed jobs.</label><br>
+                        <input type="radio" id="changemind" name="unsubscribe" value="changemind">
+                        <label for="changemind">I changed my mind.</label><br>
+                        <input type="radio" id="notexpected" name="unsubscribe" value="notexpected">
+                        <label for="notexpected">This isn't what I expected when I signed up.</label><br>
+                        <input type="radio" id="manyemail" name="unsubscribe" value="manyemail">
+                        <label for="manyemail">I receive too many Caterpillar emails.</label><br>
+                    </div>
+                    <div>
+                        <button class="btn" onclick={handleSubmit}>SUBMIT</button>
+                    </div>
+                </div>                    
+            </div>
+    </div>
+</template>
