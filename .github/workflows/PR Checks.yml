@@ -71,16 +71,20 @@ jobs:
     # Convert Source to metadata
       - name: 'Convert Source'
         id: convertSource
+        if: steps.loginToOrg.status == 'success'
         run: |            
             echo "Coverting source to metadata format"
             sfdx force:source:convert -d deploy_code
     # Check validate package
       - name: 'Validate package'
         id: validatePackage
-        run:  sfdx force:mdapi:deploy -d deploy_code -u SFDX-ENV -w 5 -l RunLocalTests
-
+        if : steps.convertSource.status == 'success'
+        run: |
+          sfdx force:mdapi:deploy -d deploy_code -u SFDX-ENV -w 5 -l RunLocalTests
+          isValidated = 'true'
       # Running Local Tests
-      - name: Runtests        
+      - name: Runtests  
+        if : steps.validatePackage.status == 'success' 
         run : |
           echo ${{steps.validatePackage.outputs}}
            sfdx force:apex:test:run -l RunLocalTests -w 30
