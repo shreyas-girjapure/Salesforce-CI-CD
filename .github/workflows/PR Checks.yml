@@ -52,23 +52,16 @@ jobs:
     needs: Formatting-and-Verifications
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-
       - name: 'Checkout source code'
         uses: actions/checkout@v2
-
-      # Check for package changes using git diff
-      - name: 'Check for package changes'
-        id: checkForChanges
+    # Convert Source to metadata
+      - name: 'Convert Source'
         run: |
-            git fetch origin $GITHUB_BASE_REF --depth=1
-            changedPaths=$( git diff-tree --name-only origin/$GITHUB_BASE_REF $GITHUB_SHA )
-            set +e
-            hasChanges='false'
-            if [ $(echo "$changedPaths" | grep -c '^force-app') == 1 ]; then
-                hasChanges='true'
-            fi
-            echo "::set-output name=hasChanges::$hasChanges"
-
+        echo "Coverting source to metadata format"
+        sfdx force:source:convert -d deploy_code
+    # Check validate package
+      - name: 'Validate package'
+        run:  sfdx force:mdapi:deploy -d deploy_code
     # Login To ORG      
       - name: Login to org
         uses : sfdx-actions/setup-sfdx@v1

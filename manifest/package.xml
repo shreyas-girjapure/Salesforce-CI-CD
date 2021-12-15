@@ -202,10 +202,6 @@
     </types>
     <types>
         <members>*</members>
-        <name>Settings</name>
-    </types>
-    <types>
-        <members>*</members>
         <name>PermissionSetGroup</name>
     </types>
     <types>
