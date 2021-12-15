@@ -8,8 +8,7 @@
         <apex:outputLabel value="{!$Label.site.password}" for="password" />
         <apex:inputSecret id="password" value="{!password}" />
         <apex:outputText value="" />
-        <apex:commandButton
-          action="{!login}"
+        <apex:commandButton action="{!login}"
           value="{!$Label.site.login_button}"
           id="loginButton"
         />
@@ -18,17 +17,13 @@
         <apex:outputText value="" />
         <apex:panelGroup id="theLinks">
           <apex:outputLink value="{!$Page.ForgotPassword}">
-            {!$Label.site.forgot_your_password_q}</apex:outputLink
-          >
-          <apex:outputText
-            value=" | "
+            {!$Label.site.forgot_your_password_q}</apex:outputLink>
+          <apex:outputText value=" | "
             rendered="{!$Site.RegistrationEnabled}"
           />
-          <apex:outputLink
-            value="{!$Page.SiteRegister}"
+          <apex:outputLink value="{!$Page.SiteRegister}"
             rendered="{!$Site.RegistrationEnabled}"
-            >{!$Label.site.new_user_q}</apex:outputLink
-          >
+            >{!$Label.site.new_user_q}</apex:outputLink>
         </apex:panelGroup>
       </apex:panelGrid>
     </apex:outputPanel>

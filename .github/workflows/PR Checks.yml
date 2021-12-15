@@ -16,7 +16,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  Formatting and Verifications:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -24,17 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-                  # Cache node_modules to speed up the process
+      # Cache node_modules to speed up the process
       - name: "Restore node_modules cache"
         id: cache-npm
         uses: actions/cache@v1
@@ -53,11 +43,33 @@ jobs:
       # Prettier formatting
       - name: "Code formatting verification with Prettier"
         run: npm run prettier
-
       # Lint LWC
       - name: "Lint Lightning Web Components"
         run: npm run lint
-      # Login To ORG      
+  
+  Create Package : 
+    runs-on: ubuntu-latest
+    needs: Formatting and Verifications
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+
+      - name: 'Checkout source code'
+        uses: actions/checkout@v2
+
+      # Check for package changes using git diff
+      - name: 'Check for package changes'
+        id: checkForChanges
+        run: |
+            git fetch origin $GITHUB_BASE_REF --depth=1
+            changedPaths=$( git diff-tree --name-only origin/$GITHUB_BASE_REF $GITHUB_SHA )
+            set +e
+            hasChanges='false'
+            if [ $(echo "$changedPaths" | grep -c '^force-app') == 1 ]; then
+                hasChanges='true'
+            fi
+            echo "::set-output name=hasChanges::$hasChanges"
+            
+    # Login To ORG      
       - name: Login to org
         uses : sfdx-actions/setup-sfdx@v1
         with:

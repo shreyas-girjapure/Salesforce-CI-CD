@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>personName__c</fullName>
     <caseSensitive>false</caseSensitive>
-    <description
-  >this will hold  the person who is making changes in sub or unsub be it user account contact</description>
+    <description>this will hold  the person who is making changes in sub or unsub be it user account contact</description>
     <externalId>false</externalId>
     <label>personName</label>
     <length>100</length>
