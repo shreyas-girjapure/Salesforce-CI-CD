@@ -62,7 +62,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: 'Checkout source code'
         uses: actions/checkout@v2
-
+      # Login To ORG      
+      - name: Login to org
+        uses : sfdx-actions/setup-sfdx@v1
+        with:
+          sfdx-auth-url: ${{ secrets.AUTH_SECRET }}
     # Convert Source to metadata
       - name: 'Convert Source'
         run: |
@@ -70,12 +74,8 @@ jobs:
             sfdx force:source:convert -d deploy_code
     # Check validate package
       - name: 'Validate package'
-        run:  sfdx force:mdapi:deploy -d deploy_code
-    # Login To ORG      
-      - name: Login to org
-        uses : sfdx-actions/setup-sfdx@v1
-        with:
-          sfdx-auth-url: ${{ secrets.AUTH_SECRET }}
+        run:  sfdx force:mdapi:deploy -d deploy_code -u SFDX-ENV
+
       # Running Local Tests
       - name: Runtests
         run : sfdx force:apex:test:run -l RunLocalTests -w 30
