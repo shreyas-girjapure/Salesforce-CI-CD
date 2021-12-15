@@ -42,11 +42,8 @@ jobs:
     # Convert Source to metadata
       - name: 'Convert Source'
         id: convertSource
-        if: always()
-        run: |
-            echo "$?"   
-            failed=failure()
-            success=success()
+        if: success()
+        run: |             
             echo "failure $failed success $success"     
             echo "Coverting source to metadata format"
             echo ${{join(steps.loginToOrg.outputs.*,'\n')}}
