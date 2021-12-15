@@ -45,7 +45,9 @@ jobs:
         if: always()
         run: |
             echo "$?"   
-            echo "failure failure() success success()"     
+            failed=failure()
+            success=success()
+            echo "failure $failed success $success"     
             echo "Coverting source to metadata format"
             echo ${{join(steps.loginToOrg.outputs.*,'\n')}}
             echo ${{steps.loginToOrg.exit_code}}
