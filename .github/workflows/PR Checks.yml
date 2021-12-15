@@ -61,9 +61,9 @@ jobs:
 
   login-steps:
     runs-on : ubuntu-latest
-      steps:
-        - uses : sfdx-actions/setup-sfdx@v1
-          with:
-            sfdx-auth-url: ${{ secrets.AUTH_SECRET }}
-        - name: sfdx-test-run
-          run: sfdx force:apex:test:run -l RunLocalTests -w 30
+    steps:
+      - uses : sfdx-actions/setup-sfdx@v1
+        with:
+          sfdx-auth-url: ${{ secrets.AUTH_SECRET }}
+      - name: sfdx-test-run
+        run: sfdx force:apex:test:run -l RunLocalTests -w 30
