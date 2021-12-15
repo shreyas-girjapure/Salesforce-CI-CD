@@ -47,7 +47,9 @@ jobs:
       # Install npm dependencies for Prettier and Jest
       - name: "Install npm dependencies"
         if: steps.cache-npm.outputs.cache-hit != 'true'
-        run: builds/install_dependencies.sh
+        run: |
+          echo "Installing npm dependencies",
+          npm install
 
       # Start local Apex parser server for Prettier
       - name: "Start local Apex parser server for Prettier"
