@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>selection__c</fullName>
     <caseSensitive>false</caseSensitive>
-    <description>this will hold the selection data what has he selected</description>
+    <description
+  >this will hold the selection data what has he selected</description>
     <externalId>false</externalId>
     <label>selection</label>
     <length>100</length>

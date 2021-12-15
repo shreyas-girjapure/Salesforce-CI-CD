@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <KnowledgeSettings xmlns="http://soap.sforce.com/2006/04/metadata">
     <answers>
         <enableArticleCreation>false</enableArticleCreation>
@@ -17,13 +17,17 @@
     <enableKnowledge>true</enableKnowledge>
     <enableKnowledgeAgentContribution>false</enableKnowledgeAgentContribution>
     <enableKnowledgeAnswersPromotion>false</enableKnowledgeAnswersPromotion>
-    <enableKnowledgeArticleTextHighlights>true</enableKnowledgeArticleTextHighlights>
+    <enableKnowledgeArticleTextHighlights
+  >true</enableKnowledgeArticleTextHighlights>
     <enableKnowledgeCaseRL>false</enableKnowledgeCaseRL>
-    <enableKnowledgeKeywordAutoComplete>true</enableKnowledgeKeywordAutoComplete>
+    <enableKnowledgeKeywordAutoComplete
+  >true</enableKnowledgeKeywordAutoComplete>
     <enableKnowledgeTitleAutoComplete>true</enableKnowledgeTitleAutoComplete>
-    <enableLightningKbAutoLoadRichTextField>false</enableLightningKbAutoLoadRichTextField>
+    <enableLightningKbAutoLoadRichTextField
+  >false</enableLightningKbAutoLoadRichTextField>
     <enableLightningKnowledge>true</enableLightningKnowledge>
-    <showArticleSummariesCustomerPortal>true</showArticleSummariesCustomerPortal>
+    <showArticleSummariesCustomerPortal
+  >true</showArticleSummariesCustomerPortal>
     <showArticleSummariesInternalApp>true</showArticleSummariesInternalApp>
     <showArticleSummariesPartnerPortal>true</showArticleSummariesPartnerPortal>
     <showValidationStatusField>true</showValidationStatusField>

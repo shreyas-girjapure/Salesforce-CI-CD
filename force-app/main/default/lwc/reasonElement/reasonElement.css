@@ -1,39 +1,39 @@
-.body{
-    background-color: black;
+.body {
+  background-color: black;
 }
 .heading {
-    color: white;
-    text-align: center;
-    font-size: large;
-    font-weight: bold;
+  color: white;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
 }
-.bottombar{
-    width: 7%;
-    text-align: center;
-    border: 3px solid #f3f30c;
-    border-radius: 3px;
+.bottombar {
+  width: 7%;
+  text-align: center;
+  border: 3px solid #f3f30c;
+  border-radius: 3px;
 }
-.paradetails{
-    color: white;
-    text-align: center;  
+.paradetails {
+  color: white;
+  text-align: center;
 }
-.options{
-    text-align: initial;
-    padding: 12px 0 25px 38%;
+.options {
+  text-align: initial;
+  padding: 12px 0 25px 38%;
 }
-.btn{
-    padding: 9px 43px 8px 43px;
-    font-weight: bold;
-    background-color: black;
-    color: white;
-    border-color: white;
+.btn {
+  padding: 9px 43px 8px 43px;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  border-color: white;
 }
 .close {
-    position: absolute;   
-    right: 30px;
-    transition: all 200ms;
-    font-size: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-  }
+  position: absolute;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}

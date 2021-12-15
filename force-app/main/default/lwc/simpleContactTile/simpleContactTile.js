@@ -1,15 +1,14 @@
-import { api, LightningElement } from 'lwc';
+import { api, LightningElement } from "lwc";
 
-import NAME_FIELD from '@salesforce/schema/Contact.Name';
+import NAME_FIELD from "@salesforce/schema/Contact.Name";
 
-console.log('thename',NAME_FIELD);
+console.log("thename", NAME_FIELD);
 export default class SimpleContactTile extends LightningElement {
-    @api
-    recordId;
+  @api
+  recordId;
 
-    @api
-    objectApiName;
+  @api
+  objectApiName;
 
-    fields = [NAME_FIELD]
- 
+  fields = [NAME_FIELD];
 }

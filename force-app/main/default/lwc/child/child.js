@@ -1,6 +1,6 @@
-import { LightningElement ,api } from "lwc";
+import { LightningElement, api } from "lwc";
 
 export default class Child extends LightningElement {
   @api
-  name="childName"
+  name = "childName";
 }

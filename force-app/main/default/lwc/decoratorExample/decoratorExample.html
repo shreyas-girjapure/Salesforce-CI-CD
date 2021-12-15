@@ -1,10 +1,22 @@
 <template>
-    <div class="container slds-m-around_small">
-        <lightning-input label="firstName" value={value.firstName} onchange={changeHandler}></lightning-input>
-        <lightning-input label="lastName" value={value.lastName} onchange={changeHandler}></lightning-input>
-        <p class="font">the first name is :{firstName}</p>    
-        <p class="font"> the last name is :{lastName}</p>     
-        <p>this is message {msgValue}</p>   
-        <lightning-input label = "message" value={msgValue} onchange={changeVal}></lightning-input>
-    </div>    
+  <div class="container slds-m-around_small">
+    <lightning-input
+      label="firstName"
+      value={value.firstName}
+      onchange={changeHandler}
+    ></lightning-input>
+    <lightning-input
+      label="lastName"
+      value={value.lastName}
+      onchange={changeHandler}
+    ></lightning-input>
+    <p class="font">the first name is :{firstName}</p>
+    <p class="font">the last name is :{lastName}</p>
+    <p>this is message {msgValue}</p>
+    <lightning-input
+      label="message"
+      value={msgValue}
+      onchange={changeVal}
+    ></lightning-input>
+  </div>
 </template>

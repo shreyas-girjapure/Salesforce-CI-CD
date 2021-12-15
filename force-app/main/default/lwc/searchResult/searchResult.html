@@ -1,12 +1,8 @@
 <template>
-    <template if:true={articles}>
-        <template for:each={articles} for:item="article">
-            <p key={article.Id}>
-                {article.Title}
-            </p>
-        </template>
+  <template if:true={articles}>
+    <template for:each={articles} for:item="article">
+      <p key={article.Id}>{article.Title}</p>
     </template>
-    <template if:false={articles}>
-        Not found 
-    </template>    
+  </template>
+  <template if:false={articles}> Not found </template>
 </template>

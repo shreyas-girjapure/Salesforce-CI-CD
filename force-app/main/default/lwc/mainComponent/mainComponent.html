@@ -1,14 +1,13 @@
-<template>    
-    <template if:true={task}>
-        <c-task-element onunsubscribe={handleUnsub}></c-task-element>
-    </template>
+<template>
+  <template if:true={task}>
+    <c-task-element onunsubscribe={handleUnsub}></c-task-element>
+  </template>
 
-    <template if:true={reason}>
-        <c-reason-element onssubmit={handleReason}></c-reason-element>
-    </template>
+  <template if:true={reason}>
+    <c-reason-element onssubmit={handleReason}></c-reason-element>
+  </template>
 
-    <template if:true={thankyou}>
-        <c-thankyou-element></c-thankyou-element>
-    </template>
-    
+  <template if:true={thankyou}>
+    <c-thankyou-element></c-thankyou-element>
+  </template>
 </template>

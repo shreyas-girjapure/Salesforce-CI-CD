@@ -1,13 +1,19 @@
 <template>
-    <div class="slds-m-around_small" if:true={isFor}>
-        <div  class="slds-m-around_small container" for:each={contacts} for:item="contact" for:index="index" key={contact.id}>
-            <p>{index} {contact.firstName} {contact.lastName}</p>
-        </div>        
+  <div class="slds-m-around_small" if:true={isFor}>
+    <div
+      class="slds-m-around_small container"
+      for:each={contacts}
+      for:item="contact"
+      for:index="index"
+      key={contact.id}
+    >
+      <p>{index} {contact.firstName} {contact.lastName}</p>
     </div>
-    <div class="slds-m-around_small" if:false={isFor}>        
-        <template iterator:it={contacts} >
-            <p class="container" key={it.value.id}>{it.value.firstName}</p>
-        </template>
-    </div>
-   <lightning-button label="clickeee" onclick={changeValue}></lightning-button>
+  </div>
+  <div class="slds-m-around_small" if:false={isFor}>
+    <template iterator:it={contacts}>
+      <p class="container" key={it.value.id}>{it.value.firstName}</p>
+    </template>
+  </div>
+  <lightning-button label="clickeee" onclick={changeValue}></lightning-button>
 </template>

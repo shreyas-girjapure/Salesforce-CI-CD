@@ -1,11 +1,26 @@
 <template>
-    <div class="slds-m-around_small">
-        <lightning-card title="Calculator" class="container">
-            <lightning-input label="Number 1" name="one" placeholder="enter number here" value={num1} onchange={handleChange}></lightning-input>
-            <lightning-input label="Number 2" name="two" placeholder="enter number here" value={num2} onchange={handleChange}></lightning-input>
-            <p class="result">{result}</p>
-            <lightning-button label="Add" onclick={addition}></lightning-button>
-            <lightning-button label="Subtraction" onclick={subtraction}></lightning-button>
-        </lightning-card>
-    </div>    
+  <div class="slds-m-around_small">
+    <lightning-card title="Calculator" class="container">
+      <lightning-input
+        label="Number 1"
+        name="one"
+        placeholder="enter number here"
+        value={num1}
+        onchange={handleChange}
+      ></lightning-input>
+      <lightning-input
+        label="Number 2"
+        name="two"
+        placeholder="enter number here"
+        value={num2}
+        onchange={handleChange}
+      ></lightning-input>
+      <p class="result">{result}</p>
+      <lightning-button label="Add" onclick={addition}></lightning-button>
+      <lightning-button
+        label="Subtraction"
+        onclick={subtraction}
+      ></lightning-button>
+    </lightning-card>
+  </div>
 </template>
