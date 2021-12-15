@@ -16,7 +16,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  Formatting and Verifications:
+  Formatting-and-Verifications:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -49,7 +49,7 @@ jobs:
   
   Create Package : 
     runs-on: ubuntu-latest
-    needs: Formatting and Verifications
+    needs: Formatting-and-Verifications
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
 
@@ -68,7 +68,7 @@ jobs:
                 hasChanges='true'
             fi
             echo "::set-output name=hasChanges::$hasChanges"
-            
+
     # Login To ORG      
       - name: Login to org
         uses : sfdx-actions/setup-sfdx@v1
