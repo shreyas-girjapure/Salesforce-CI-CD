@@ -42,10 +42,12 @@ jobs:
     # Convert Source to metadata
       - name: 'Convert Source'
         id: convertSource
+        if: always()
         run: |            
             echo "Coverting source to metadata format"
             echo ${{steps.loginToOrg.outputs}}
             echo ${{steps.loginToOrg.exit_code}}
+            echo ${{steps.loginToOrg.status}}
             sfdx force:source:convert -d deploy_code
     # Check validate package
       - name: 'Validate package'
