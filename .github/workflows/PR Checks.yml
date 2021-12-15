@@ -57,8 +57,8 @@ jobs:
     # Convert Source to metadata
       - name: 'Convert Source'
         run: |
-        echo "Coverting source to metadata format"
-        sfdx force:source:convert -d deploy_code
+            echo "Coverting source to metadata format"
+            sfdx force:source:convert -d deploy_code
     # Check validate package
       - name: 'Validate package'
         run:  sfdx force:mdapi:deploy -d deploy_code
