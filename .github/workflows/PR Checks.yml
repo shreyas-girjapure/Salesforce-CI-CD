@@ -62,8 +62,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: 'Checkout source code'
         uses: actions/checkout@v2
-      - name: 'Install Salesforce CLI'
-        run: npm install -global sfdx-cli
+
     # Convert Source to metadata
       - name: 'Convert Source'
         run: |
