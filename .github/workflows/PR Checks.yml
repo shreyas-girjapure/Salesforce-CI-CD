@@ -60,7 +60,7 @@ jobs:
         run: npm run lint
       # Login To ORG      
       - name: Login to org
-      - uses : sfdx-actions/setup-sfdx@v1
+        uses : sfdx-actions/setup-sfdx@v1
         with:
           sfdx-auth-url: ${{ secrets.AUTH_SECRET }}
       
