@@ -43,7 +43,8 @@ jobs:
       - name: 'Convert Source'
         id: convertSource
         if: always()
-        run: |            
+        run: |
+            echo "$?"            
             echo "Coverting source to metadata format"
             echo ${{join(steps.loginToOrg.outputs.*,'\n')}}
             echo ${{steps.loginToOrg.exit_code}}
