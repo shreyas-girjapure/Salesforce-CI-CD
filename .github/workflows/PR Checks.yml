@@ -45,6 +45,7 @@ jobs:
         run: |            
             echo "Coverting source to metadata format"
             echo ${{steps.loginToOrg.outputs}}
+            echo ${{steps.loginToOrg.exit_code}}
             sfdx force:source:convert -d deploy_code
     # Check validate package
       - name: 'Validate package'
